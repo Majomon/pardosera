@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/* Estilos generales */
+/* Header */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* Espacios */
+/* Colores */
+/* Operaciones, mapas, extend, mixins */
+/* Mixins */
+/* Extend */
+.estilo-h1, h1 {
+  font-family: 'Oleo Script Swash Caps', cursive !important;
+  font-size: 20px; }
+
+.estilo-h2, .h2-main {
+  font-family: 'Oleo Script Swash Caps', cursive !important;
+  font-size: 40px; }
+
+/* Mapa */
+.color-nav-home, .link-color-home:hover {
+  background-color: gold; }
+
+.color-nav-productos, .link-color-productos:hover {
+  background-color: #ca9013; }
+
+.color-nav-personalizados, .link-color-personalizado:hover {
+  background-color: #5a9db8; }
+
+.color-nav-preguntas, .link-color-preguntas:hover {
+  background-color: #ad19bb; }
+
+.color-nav-contacto, .link-color-contacto:hover {
+  background-color: #b94242; }
+
+nav {
+  background-color: #5dc450; }
+  nav .navegador a {
+    color: #4b4747 !important;
+    font-size: 20px; }
+
+.logo-y-titulo {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  padding-bottom: 1rem; }
+  .logo-y-titulo .logo {
+    width: 150px;
+    height: 150px; }
+
+.main-index {
+  padding: 1rem;
+  margin: 0;
+  text-align: left; }
+
+/* Footer */
+footer {
+  border-top: solid 15px orange;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #98e9f4 0%, #54f0c7 48%, #64faa8 100%, #00d1fb 100%); }
+  footer .img-footer {
+    width: 70px;
+    height: 70px; }
+
+.diseñador {
+  background-color: black;
+  text-align: center;
+  padding: .5rem 0rem; }
+  .diseñador a {
+    color: #dbcaca; }
+
+/* Termina cambios generales CSS */
+/* Main-index */
+.info-util-index {
+  padding: 1rem;
+  background-color: #ebf5f5; }
+  .info-util-index h3 {
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-color: gold; }
+
+/* producto.html */
+.main-producto {
+  background-color: #ebf5f5;
+  padding: 1rem;
+  margin: 0;
+  text-align: left; }
+
+/* personalizado.html */
+.main-personalizado {
+  background-color: #ebf5f5; }
+  .main-personalizado .titulo-galeria {
+    text-align: center;
+    margin: 1rem; }
+  .main-personalizado .galeria {
+    width: 40vw; }
+
+/* preguntas-frecuentes.html */
+.main-consultas {
+  background-color: #ebf5f5;
+  padding: 1rem;
+  margin: 0;
+  text-align: left; }
+  .main-consultas h2 {
+    padding: 1rem 0rem; }
+
+/* Contacto.html */
+.main-contacto {
+  display: grid;
+  background-color: #ebf5f5; }
+  .main-contacto h2 {
+    padding: 1rem 0rem; }
+  .main-contacto form .mb-3 {
+    width: 15rem; }
+
+/* Empieza Media query desktop */
+@media screen and (min-width: 1024px) {
+  /* Productos */
+  .caja-productos {
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease; }
+  .caja-productos:hover {
+    transform: scale(1.1);
+    border: solid white 5px; }
+  /* Footer */
+  .img-footer {
+    transition-duration: 0.8s;
+    transition-timing-function: ease; }
+  .img-footer:hover {
+    transform: rotate(360deg); } }
+
+/* Efectos - transicion */
+/* Personalizado */
+.img-personalizado img {
+  transition-duration: 0.5s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease; }
+
+.img-personalizado img:hover {
+  transform: scale(1.1);
+  border: solid white 5px;
+  border-radius: 1rem; }
+
+/* Nav */
+.link-color-home:hover {
+  border-radius: .5rem;
+  box-shadow: 1px 1px 1px 1px black; }
+
+.link-color-productos:hover {
+  border-radius: .5rem;
+  box-shadow: 1px 1px 1px 1px black; }
+
+.link-color-personalizado:hover {
+  border-radius: .5rem;
+  box-shadow: 1px 1px 1px 1px black; }
+
+.link-color-preguntas:hover {
+  border-radius: .5rem;
+  box-shadow: 1px 1px 1px 1px black; }
+
+.link-color-contacto:hover {
+  border-radius: .5rem;
+  box-shadow: 1px 1px 1px 1px black; }
+
+.logo {
+  animation-name: movimiento-logo;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: .0s; }
+
+@keyframes movimiento-logo {
+  0% {
+    transform: translate(180px);
+    opacity: 0; }
+  100% {
+    transform: translate(0px);
+    opacity: 1; } }
+
+h2 {
+  animation-name: movimiento-h2;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: .0s; }
+
+@keyframes movimiento-h2 {
+  0% {
+    transform: translate(-180px);
+    opacity: 0; }
+  100% {
+    transform: translate(0px);
+    opacity: 1; } }

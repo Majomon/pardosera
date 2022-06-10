@@ -1,0 +1,94 @@
+/* Estilos generales */
+/* Header */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import "variables";
+@import "cosas-de-sass-2";
+
+h1 {
+    @extend.estilo-h1;
+}
+
+.h2-main {
+    @extend.estilo-h2;
+}
+
+nav {
+    background-color: rgb(93, 196, 80);
+    
+    .navegador a{
+        color: rgb(75, 71, 71) !important;
+        font-size: 20px;
+    }
+}
+
+.logo-y-titulo {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    padding-bottom: 1rem;
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+.main-index {
+    @include espacios-align($spa1,0,left)
+}
+
+
+/* Footer */
+
+footer {
+    border-top: solid 15px orange;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(152, 233, 244, 1) 0%, rgba(84, 240, 199, 1) 48%, rgba(100, 250, 168, 1) 100%, rgba(0, 209, 251, 1) 100%);
+    .img-footer {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+
+.diseñador {
+    background-color: black;
+    text-align: center;
+    padding: .5rem 0rem;
+
+    a{
+        color: rgb(219, 202, 202);
+    }
+}
+/* Termina cambios generales CSS */
+
+/* Main-index */
+.info-util-index{
+    padding: $spa1;
+    background-color: $c-fondo;
+
+    h3{
+        display: inline-block;
+        text-decoration: underline;
+        text-decoration-color: gold;
+    }
+}
+
+@import "productos";
+
+@import "personalizado";
+
+@import "preguntas-frecuentes";
+
+@import "contacto";
+
+@import "media";
+
+@import "efecto-transicion"

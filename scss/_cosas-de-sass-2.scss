@@ -1,0 +1,36 @@
+/* Operaciones, mapas, extend, mixins */
+
+/* Mixins */
+@mixin espacios-align ($padd,$marg,$centrado){
+    padding: $padd;
+    margin: $marg;
+    text-align: $centrado;
+}
+
+/* Extend */
+.estilo-h1{
+    font-family: 'Oleo Script Swash Caps', cursive !important;
+    font-size: 20px;
+}
+
+.estilo-h2{
+    font-family: 'Oleo Script Swash Caps', cursive !important;
+    font-size: 40px;
+}
+
+/* Mapa */
+
+$link-nav:(
+    home: gold,
+    productos: rgb(202, 144, 19),
+    personalizados: rgb(90, 157, 184),
+    preguntas: rgb(173, 25, 187),
+    contacto: rgb(185, 66, 66)
+);
+
+@each $nav, $color in $link-nav {
+    .color-nav-#{$nav}{
+        background-color: $color;
+    }
+        
+}
