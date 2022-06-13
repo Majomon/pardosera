@@ -1,6 +1,6 @@
 /* Estilos generales */
 /* Header */
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -12,15 +12,13 @@ h1 {
     @extend.estilo-h1;
 }
 
-.h2-main {
-    @extend.estilo-h2;
-}
 
 nav {
-    background-color: rgb(93, 196, 80);
-    
-    .navegador a{
-        color: rgb(255, 255, 255) !important;
+    background: rgb(10, 174, 170);
+    background: linear-gradient(90deg, rgba(10, 174, 170, 1) 0%, rgba(45, 194, 191, 1) 25%, rgba(80, 215, 213, 1) 50%, rgba(114, 235, 234, 1) 75%, rgba(100, 250, 168, 1) 100%, rgba(149, 255, 255, 1) 100%);
+
+    .navegador a {
+        color: rgb(0, 0, 0) !important;
         font-size: 20px;
         @extend.estilo-h1;
     }
@@ -40,16 +38,19 @@ nav {
 
 
 .main-index {
-    @include espacios-align($spa1,0,left)
+    @include espacios-align($spa1, 0, left)
 }
 
 
 /* Footer */
 
 footer {
-    border-top: solid 15px orange;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(152, 233, 244, 1) 0%, rgba(84, 240, 199, 1) 48%, rgba(100, 250, 168, 1) 100%, rgba(0, 209, 251, 1) 100%);
+    /*  border-top: solid 15px orange; */
+    /*     background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(152, 233, 244, 1) 0%, rgba(84, 240, 199, 1) 48%, rgba(100, 250, 168, 1) 100%, rgba(0, 209, 251, 1) 100%); */
+    background: rgb(10, 174, 170);
+    background: linear-gradient(90deg, rgba(10, 174, 170, 1) 0%, rgba(45, 194, 191, 1) 25%, rgba(80, 215, 213, 1) 50%, rgba(114, 235, 234, 1) 75%, rgba(100, 250, 168, 1) 100%, rgba(149, 255, 255, 1) 100%);
+
     .img-footer {
         width: 60px;
         height: 60px;
@@ -59,18 +60,20 @@ footer {
 
 
 .diseñador {
+    font-family: 'Patrick Hand', cursive !important;
     background-color: black;
     text-align: center;
     padding: .5rem 0rem;
 
-    a{
+    a {
         color: rgb(219, 202, 202);
     }
 }
+
 /* Termina cambios generales CSS */
 
 /* Main-index */
-.info-util-index{
+.info-util-index {
     padding: $spa1;
     background-color: $c-fondo;
     display: flex;
@@ -78,13 +81,13 @@ footer {
     align-items: center;
     justify-content: space-around;
 
-    h3{
+    h3 {
 
         display: inline-block;
-        text-decoration: underline;
-        text-decoration-color: gold;
+        /*         text-decoration: underline; */
     }
-    img{
+
+    img {
         border-radius: 5%;
 
     }
@@ -98,6 +101,4 @@ footer {
 
 @import "contacto";
 
-@import "media";
-
-@import "efecto-transicion"
+@import "media_y_efectos";

@@ -1,0 +1,168 @@
+/* Empieza Media query desktop */
+
+@media screen and (min-width: 768px) {
+
+    /* Index */
+    .info-util-index {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            width: 70%;
+            margin: $spa3;
+        }
+
+        .subli_art {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .logo-y-titulo {
+        animation-name: movimiento-logo;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-delay: .0s;
+    }
+
+    @keyframes movimiento-logo {
+        0% {
+            transform: translate(-180px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translate(0px);
+            opacity: 1;
+        }
+
+    }
+
+    /* Productos */
+    .caja-productos {
+        transition-duration: 0.5s;
+        transition-delay: 0.1s;
+        transition-timing-function: ease;
+    }
+
+    .caja-productos:hover {
+        transform: scale(1.1);
+        border: solid white 5px;
+    }
+
+    /* Personalizado */
+    .main-personalizado {
+
+        .titulo-galeria {
+            margin: $spa2;
+        }
+
+        .galeria {
+            width: 35%;
+
+        }
+
+        .segunda-galeria img {
+            width: 220px;
+            margin: 1.5rem;
+            border: 1px solid black;
+            transition-duration: 0.5s;
+            transition-delay: 0.1s;
+            transition-timing-function: ease;
+        }
+
+        .segunda-galeria img:hover {
+            transform: scale(1.4);
+        }
+
+        .img-personalizado img {
+            transition-duration: 0.5s;
+            transition-delay: 0.1s;
+            transition-timing-function: ease;
+        }
+
+        .img-personalizado img:hover {
+            transform: scale(1.1);
+            border: solid white 5px;
+            border-radius: 1rem;
+        }
+
+
+    }
+
+
+    /* Preguntas */
+    .main-consultas {
+
+        @include espacios-align(0, $spa1, left);
+
+        h2 {
+            padding: $spa1 0rem;
+            text-align: center;
+        }
+    }
+
+
+    /* Footer */
+    .img-footer {
+        transition-duration: 0.8s;
+        transition-timing-function: ease;
+
+    }
+
+    .img-footer:hover {
+        transform: rotate(360deg);
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Navegador */
+    .navegador a {
+        padding: 0rem 1rem !important;
+    }
+
+
+    .navegador a:hover {
+        transform: scale(1.2);
+    }
+
+    /* Preguntas */
+    .main-consultas {
+        img {
+            height: 400px;
+        }
+    }
+
+    /* Contacto */
+    .main-contacto {
+        grid-template-areas:
+            "formulario horario"
+            "formulario ubicacion"
+        ;
+        grid-template-columns: 1fr 2fr;
+
+
+        iframe {
+            display: flex;
+            width: 350px;
+            height: 220px;
+        }
+
+        form {
+            grid-area: formulario;
+            align-items: right;
+        }
+
+        .horario {
+            grid-area: horario;
+            padding: $spa1 0rem;
+        }
+
+        .ubicacion {
+            grid-area: ubicacion;
+        }
+    }
+}
