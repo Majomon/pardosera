@@ -80,9 +80,9 @@ footer {
   align-items: center;
   justify-content: space-around; }
   .info-util-index h3 {
-    display: inline-block;
-    /*         text-decoration: underline; */ }
+    display: inline-block; }
   .info-util-index img {
+    width: 300px;
     border-radius: 5%; }
 
 /* producto.html */
