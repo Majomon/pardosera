@@ -1,6 +1,13 @@
 /* Empieza Media query desktop */
 
 @media screen and (min-width: 1024px) {
+
+    .info-util-index {
+        img {
+            width: 300px;
+        }
+    }
+
     /* Productos */
     .caja-productos {
         transition-duration: 0.5s;
@@ -24,4 +31,14 @@
         transform: rotate(360deg);
     }
 
+}
+
+@media screen and (max-width:1023px){
+    
+    /* Main-index */
+    .info-util-index {
+        img {
+            width: 200px;
+        }
+    }
 }

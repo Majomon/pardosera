@@ -1,4 +1,10 @@
 /* producto.html */
+
+.h1-productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .main-producto{
     background-color: $c-fondo;
     @include espacios-align($spa1,0,left);

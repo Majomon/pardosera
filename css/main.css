@@ -10,7 +10,7 @@
 /* Operaciones, mapas, extend, mixins */
 /* Mixins */
 /* Extend */
-.estilo-h1, h1 {
+.estilo-h1, h1, nav .navegador a {
   font-family: 'Oleo Script Swash Caps', cursive !important;
   font-size: 20px; }
 
@@ -19,25 +19,25 @@
   font-size: 40px; }
 
 /* Mapa */
-.color-nav-home, .link-color-home:hover {
+.color-nav-home {
   background-color: gold; }
 
-.color-nav-productos, .link-color-productos:hover {
+.color-nav-productos {
   background-color: #ca9013; }
 
-.color-nav-personalizados, .link-color-personalizado:hover {
+.color-nav-personalizados {
   background-color: #5a9db8; }
 
-.color-nav-preguntas, .link-color-preguntas:hover {
+.color-nav-preguntas {
   background-color: #ad19bb; }
 
-.color-nav-contacto, .link-color-contacto:hover {
+.color-nav-contacto {
   background-color: #b94242; }
 
 nav {
   background-color: #5dc450; }
   nav .navegador a {
-    color: #4b4747 !important;
+    color: white !important;
     font-size: 20px; }
 
 .logo-y-titulo {
@@ -46,8 +46,7 @@ nav {
   height: 15rem;
   padding-bottom: 1rem; }
   .logo-y-titulo .logo {
-    width: 150px;
-    height: 150px; }
+    width: 150px; }
 
 .main-index {
   padding: 1rem;
@@ -60,8 +59,8 @@ footer {
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, #98e9f4 0%, #54f0c7 48%, #64faa8 100%, #00d1fb 100%); }
   footer .img-footer {
-    width: 70px;
-    height: 70px; }
+    width: 60px;
+    height: 60px; }
 
 .diseñador {
   background-color: black;
@@ -74,13 +73,24 @@ footer {
 /* Main-index */
 .info-util-index {
   padding: 1rem;
-  background-color: #ebf5f5; }
+  background-color: #ebf5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
   .info-util-index h3 {
     display: inline-block;
     text-decoration: underline;
     text-decoration-color: gold; }
+  .info-util-index img {
+    border-radius: 5%; }
 
 /* producto.html */
+.h1-productos {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .main-producto {
   background-color: #ebf5f5;
   padding: 1rem;
@@ -94,7 +104,7 @@ footer {
     text-align: center;
     margin: 1rem; }
   .main-personalizado .galeria {
-    width: 40vw; }
+    width: 35vw; }
 
 /* preguntas-frecuentes.html */
 .main-consultas {
@@ -116,6 +126,8 @@ footer {
 
 /* Empieza Media query desktop */
 @media screen and (min-width: 1024px) {
+  .info-util-index img {
+    width: 300px; }
   /* Productos */
   .caja-productos {
     transition-duration: 0.5s;
@@ -131,6 +143,11 @@ footer {
   .img-footer:hover {
     transform: rotate(360deg); } }
 
+@media screen and (max-width: 1023px) {
+  /* Main-index */
+  .info-util-index img {
+    width: 200px; } }
+
 /* Efectos - transicion */
 /* Personalizado */
 .img-personalizado img {
@@ -144,33 +161,44 @@ footer {
   border-radius: 1rem; }
 
 /* Nav */
-.link-color-home:hover {
-  border-radius: .5rem;
-  box-shadow: 1px 1px 1px 1px black; }
+/* .link-color-home:hover {
+    @extend .color-nav-home;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 1px 1px black;
+}
 
 .link-color-productos:hover {
-  border-radius: .5rem;
-  box-shadow: 1px 1px 1px 1px black; }
+    @extend .color-nav-productos;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 1px 1px black;
+}
 
 .link-color-personalizado:hover {
-  border-radius: .5rem;
-  box-shadow: 1px 1px 1px 1px black; }
+    @extend .color-nav-personalizados;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 1px 1px black;
+}
 
 .link-color-preguntas:hover {
-  border-radius: .5rem;
-  box-shadow: 1px 1px 1px 1px black; }
+    @extend .color-nav-preguntas;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 1px 1px black;
+}
 
 .link-color-contacto:hover {
-  border-radius: .5rem;
-  box-shadow: 1px 1px 1px 1px black; }
+    @extend .color-nav-contacto;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 1px 1px black;
+}
 
 .logo {
-  animation-name: movimiento-logo;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-  animation-delay: .0s; }
-
+    animation-name: movimiento-logo;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: .0s;
+}
+ */
 @keyframes movimiento-logo {
   0% {
     transform: translate(180px);

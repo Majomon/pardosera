@@ -20,8 +20,9 @@ nav {
     background-color: rgb(93, 196, 80);
     
     .navegador a{
-        color: rgb(75, 71, 71) !important;
+        color: rgb(255, 255, 255) !important;
         font-size: 20px;
+        @extend.estilo-h1;
     }
 }
 
@@ -33,7 +34,6 @@ nav {
 
     .logo {
         width: 150px;
-        height: 150px;
     }
 }
 
@@ -51,8 +51,8 @@ footer {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(152, 233, 244, 1) 0%, rgba(84, 240, 199, 1) 48%, rgba(100, 250, 168, 1) 100%, rgba(0, 209, 251, 1) 100%);
     .img-footer {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -73,11 +73,20 @@ footer {
 .info-util-index{
     padding: $spa1;
     background-color: $c-fondo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 
     h3{
+
         display: inline-block;
         text-decoration: underline;
         text-decoration-color: gold;
+    }
+    img{
+        border-radius: 5%;
+
     }
 }
 
